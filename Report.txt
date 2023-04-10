@@ -1,0 +1,56 @@
+
+||this is report for bankers algorithm 
+Report for the Multi-threaded Program that Implements the Banker's Algorithm
+The Banker's Algorithm is a resource allocation and deadlock avoidance algorithm. The algorithm is used by operating systems to 
+safely allocate resources to processes, while avoiding deadlock. This report analyzes a multithreaded program that implements the Banker's Algorithm
+ using the C programming language.
+
+Program Description
+The program starts by asking the user to input the number of processes and resources that the system has.
+It then requests the number of available resources for each resource type. The program then proceeds to request the resources allocated and the 
+maximum resources required for each process. The need matrix is calculated using the maximum required and allocated resources. The program then attempts to
+find a safe sequence using the getSafeSeq() function. If a safe sequence is found, the program proceeds to execute the processes in the safe sequence. Otherwise, the program exits.
+
+Program Components
+The program is composed of the following components:
+
+Main function
+getSafeSeq() function
+processCode() function
+Main Function
+The main function is the starting point of the program. It starts by requesting the number of processes and resources, and 
+the available resources for each resource type. The allocated and maximum required resources are then requested. The need matrix is calculated, and 
+the program attempts to find a safe sequence using the getSafeSeq() function. If a safe sequence is found, the program proceeds to execute the processes in the safe sequence.
+Otherwise, the program exits.
+
+getSafeSeq() Function
+The getSafeSeq() function attempts to find a safe sequence for the given system state. It does this by checking if each process can finish execution with the available resources.
+If a process can finish execution, its resources are released and added to the available resources, and the process is marked as finished. This process is repeated until all processes are
+finished, or until there are no more processes that can finish execution with the available resources. If a safe sequence is found, it is returned. Otherwise, -1 is returned.
+
+processCode() Function
+The processCode() function simulates the execution of a process. It requests the required resources, and if they are available, the process executes for a random amount of time.
+Once the process is finished, it releases its resources and updates the available resources.
+
+Thread Management
+The program uses POSIX threads to execute the processes in the safe sequence. Each process is executed in a separate thread.
+The main thread waits for all threads to finish execution before terminating the program.
+
+Synchronization
+The program uses a mutex lock and a condition variable to synchronize access to shared resources. The lockResources mutex is used to protect access to the resources array,
+allocated matrix, maxRequired matrix, need matrix, and safeSeq array. The condition variable is used to signal when resources become available. When a process requests resources that
+are not available, it waits on the condition variable until the resources become available.
+
+Functionality
+The program functions correctly and implements the banker's algorithm using multithreading. The program correctly determines if a safe sequence exists and runs the processes in the
+safe sequence.
+
+Efficiency
+The program uses multithreading to execute the processes in parallel, which can lead to significant performance improvements. The program efficiently checks if the resources required by
+a process are available and puts the process on hold if the resources are not available.
+Conclusion
+The program successfully implements the Banker's Algorithm to safely allocate resources to processes while avoiding deadlock. The program uses POSIX threads to execute the processes in
+the safe sequence. The program uses a mutex lock and a condition variable to synchronize access to shared resources.
+
+
+
