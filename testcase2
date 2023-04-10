@@ -1,0 +1,97 @@
+
+
+Number of processes? 5
+
+Number of resources? 3
+
+Currently Available resources (R1 R2 ...)? 7 5 3
+
+
+Resource allocated to process 1 (R1 R2 ...)? 3 2 2
+
+Resource allocated to process 2 (R1 R2 ...)? 0 0 1
+
+Resource allocated to process 3 (R1 R2 ...)? 2 0 0
+
+Resource allocated to process 4 (R1 R2 ...)? 3 0 2
+
+Resource allocated to process 5 (R1 R2 ...)? 3 0 2
+
+
+Maximum resource required by process 1 (R1 R2 ...)? 2 1 1
+
+Maximum resource required by process 2 (R1 R2 ...)? 3 0 0 
+
+Maximum resource required by process 3 (R1 R2 ...)? 4 5 1
+
+Maximum resource required by process 4 (R1 R2 ...)? 2 3 1
+
+Maximum resource required by process 5 (R1 R2 ...)? 3 2 4
+
+
+
+Safe Sequence Found : 1  2  3  4  5  
+Executing Processes...
+
+
+--> Process 1
+	Allocated :   3  2  2
+	Needed    :  -1 -1 -1
+	Available :   7  5  3
+	Resource Allocated!
+	Process Code Running...
+	Process Code Completed...
+	Process Releasing Resource...
+	Resource Released!
+	Now Available :  10  7  5
+
+
+--> Process 2
+	Allocated :   0  0  1
+	Needed    :   3  0 -1
+	Available :  10  7  5
+	Resource Allocated!
+	Process Code Running...
+	Process Code Completed...
+	Process Releasing Resource...
+	Resource Released!
+	Now Available :  10  7  6
+
+
+--> Process 3
+	Allocated :   2  0  0
+	Needed    :   2  5  1
+	Available :  10  7  6
+	Resource Allocated!
+	Process Code Running...
+	Process Code Completed...
+	Process Releasing Resource...
+	Resource Released!
+	Now Available :  12  7  6
+
+
+--> Process 4
+	Allocated :   3  0  2
+	Needed    :  -1  3 -1
+	Available :  12  7  6
+	Resource Allocated!
+	Process Code Running...
+	Process Code Completed...
+	Process Releasing Resource...
+	Resource Released!
+	Now Available :  15  7  8
+
+
+--> Process 5
+	Allocated :   3  0  2
+	Needed    :   0  2  2
+	Available :  15  7  8
+	Resource Allocated!
+	Process Code Running...
+	Process Code Completed...
+	Process Releasing Resource...
+	Resource Released!
+	Now Available :  18  7 10
+
+
+All Processes Finished
