@@ -1,2 +1,19 @@
-# bankers-algorithm
-multithreaded program that implements the banker’s algorithm discussed in Section 7.5.3. Several customers request and release resources from the bank. The banker will grant a request only if it leaves the system in a safe state. A request that leaves the system in an unsafe state will be denied. This programming assignment combines three separate topics: (1) multithreading, (2) preventing race conditions, and (3) deadlock avoidance.
+Banker's Algorithm
+This is an implementation of the Banker's algorithm in Python. The Banker's algorithm is a deadlock avoidance algorithm that is used in operating systems to manage resources efficiently.
+
+Requirements
+Python 3.6 or later
+
+Usage
+Clone the repository
+Run python3 banker.py
+
+The program reads in an input file input.txt that contains the following information:
+
+The number of processes
+The number of resources
+The maximum demand of each process in a matrix
+The allocation matrix
+The available resources
+
+The program then performs the Banker's algorithm to check if the system is in a safe state or not. If the system is in a safe state, the program will output a sequence of processes that can be executed safely.
