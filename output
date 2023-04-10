@@ -1,0 +1,34 @@
+
+
+Number of processes? 5
+
+Number of resources? 5
+
+Currently Available resources (R1 R2 ...)? 5
+1 2 3 4 5
+
+
+Resource allocated to process 1 (R1 R2 ...)? 2 1 3 4 5
+
+Resource allocated to process 2 (R1 R2 ...)? 2 3 4 5 1
+
+Resource allocated to process 3 (R1 R2 ...)? 1 2 3 4 5
+
+Resource allocated to process 4 (R1 R2 ...)? 1 2 3 1 2
+
+Resource allocated to process 5 (R1 R2 ...)? 2 3 4 5 2 
+
+
+Maximum resource required by process 1 (R1 R2 ...)? 3 3 3 3
+
+Maximum resource required by process 2 (R1 R2 ...)? 3 1 2 3 4
+
+Maximum resource required by process 3 (R1 R2 ...)? 1 2 3 4 5
+
+Maximum resource required by process 4 (R1 R2 ...)? 1 2 3 4 5
+
+Maximum resource required by process 5 (R1 R2 ...)? 2 1 4 3 5
+
+
+Unsafe State! The processes leads the system to a unsafe state.
+
